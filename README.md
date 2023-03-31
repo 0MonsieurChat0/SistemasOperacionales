@@ -1,2 +1,2 @@
 # SistemasOperacionales
-Aquí se suben as practicas de la materia.
+Aquí se suben las practicas de la materia.
