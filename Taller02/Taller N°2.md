@@ -17,26 +17,26 @@ Como se dijo en la respuesta número 2 del anterior punto, si bien es posible qu
 
 ## 2. Un problema común en los OS es la utilización de recursos. Enumere los recursos que deben gestionarse en las siguientes maquina (explique porqué):
 
-***◦ Sistemas embebidos/integrado:*** Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
+**◦ Sistemas embebidos/integrado:** Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
 Estos sistemás pueden ser microcontroladores o microprocesadores o pueden usar leguajes como C y C++. Por lo general están diseñados para hacer computación en tiempo real, además se sabe que estos incluyen la memoria, la CPU, almacenamiento y además de ello es muy importante el control adecuado de la energía.
 
-***◦ Mainframe:*** Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
+**◦ Mainframe:** Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
 Sus entre los recursos más importantes a tener en cuenta al momento de gestionar un mainframe se encuentran la CPS, la red, el almacenamiento, la memoría y algunos de los dispositivos de entrada y salida.
 
-***◦ Workstation:*** Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
+**◦ Workstation:** Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
 Como en los anteriores, los recursos importantes a tener en cuenta para el manejo de los mismos son la memoria, la CPU, almacenamiento  y además de la tarjera gráfica.
 
-***◦ Server:*** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
+**◦ Server:** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
 Los recursos de gran importacia que se gestionan para estas infraestructuras son la memoria, el almacenamiento de gran cantidad de información en muchos casos, la CPU, también en la red y otros dispositivos de entrada y salida.
 
-***◦ Mobile:*** Para los dispositivos móviles como celulares, tablets e incluso los nuevos relojes smart debido a su estructura tan compacta presentan grandes problemas en términos de memoria, capacidad de procesamiento y almacenamiento.
+**◦ Mobile:** Para los dispositivos móviles como celulares, tablets e incluso los nuevos relojes smart debido a su estructura tan compacta presentan grandes problemas en términos de memoria, capacidad de procesamiento y almacenamiento.
 Los recursos que se deben gestionar en este tipo de servicios incluyen la memoria, CPU, bateria, almacenamiento y lo dispositivos de entrada y salida.
 
 ## 3. Caracterice dos casos de uso para implementar un OS para servidor y PC.
 
-***◦ Servidor:*** Es necesario cuando se pretende alojar sitios o plaicativos web, estos a su vez deben presentar un servicio estable además que tambien debe ser seguro para los usuarios, de modo que se garantice la disponibilidad para el usuario a cualquier momento, el acceso seguro y eficiente.
+**◦ Servidor:** Es necesario cuando se pretende alojar sitios o plaicativos web, estos a su vez deben presentar un servicio estable además que tambien debe ser seguro para los usuarios, de modo que se garantice la disponibilidad para el usuario a cualquier momento, el acceso seguro y eficiente.
 
-***◦ Para un PC:*** En la edición de audio y video se manejan aplicaciones que requieren una gran cantidad en potencia de procesamiento y memoria. Un sistemas operativo está en la capacidad de proporcionar una plataforma eficiente que ejecute aplicaciones de edición para este ámbito y permite que los usuarios realicen tareas complejas de edición y creación de contenido de manera eficiente y a su vez debe proporcionar una interfaz intuitiva y fácil de usar para los usuarios.
+**◦ Para un PC:** En la edición de audio y video se manejan aplicaciones que requieren una gran cantidad en potencia de procesamiento y memoria. Un sistemas operativo está en la capacidad de proporcionar una plataforma eficiente que ejecute aplicaciones de edición para este ámbito y permite que los usuarios realicen tareas complejas de edición y creación de contenido de manera eficiente y a su vez debe proporcionar una interfaz intuitiva y fácil de usar para los usuarios.
 
 ## 4. Compare las diferencias entre multiprocesamiento simétrico y asimétrico.
 
@@ -76,4 +76,9 @@ En sus diferencias más remarcables podemos encontrar las siguientes:
 
 ## 5. Enumere los requerimientos para que dos maquinas se junten en un cluster y provean un servicio de alta disponibilidad (HA).
 
+- Sistema operativo: Las máquinas deben ejecutar el mismo sistema operativo e igual versión, además que se debe configurar de manera similar
+
+- Hardware: Las máquinas deben tener hardware similar o compatible de modo que se pueda garantizar que los recursos para el sistema sea posible compartirlos sin problemas.
+
+- Monitorización y alertas: Se deben implementar herramientas de monitorización y alertas para detectar y notificar cualquier problema en el clúster.
 
