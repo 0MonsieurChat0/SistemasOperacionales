@@ -84,7 +84,6 @@ En sus diferencias más remarcables podemos encontrar las siguientes:
 
 ***- Copias de seguridad:*** Cuado se implementan las copias de seguridad y además se hacen planeas adecuados en caso de perdida de datos que puedan garantizar que los datos estén protegidos y además de eso también sea posible la restauración rápidamente en caso de una falla en el clúster, es ahí cuando relamente se ofrece un servicio de calidad.
 
-
 ## 6. Compare las diferencias entre una excepción y una interrupción.
 
 En los sistemas operativos, las excepciones son un tipo de interrupción que emplea el procesador para notificar al sistema operativo de un suceso excepcional, por ejemplo, cuando en un proceso se utiliza una instrucción para dividir un valor utilizando el cero como denominador.  
@@ -104,7 +103,8 @@ Una vez se haya completado la configuración del DMA, se hayan transferido los d
 La caché es una memoria de muy alta velocidad, puede acelerar el CPU. Debido a ser de tan alta velocidad se encarga de almacenar información e instrucciones para que el procesador acceda a éstas de manera inmediata siempre que lo necesite.
 Sin embargo, puede causar problemas como la inconsistencia de datos, debido a una desincronización con la memoria principal, lo que llevaría a que la CPU acceda a datos incorrectos u obsoletos; cuando se produce un fallo en la caché aumenta significativamente el tiempo de acceso a los datos, también aumenta el costo del hardware.
 
-9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos: 
+## 9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos: 
+
 ◦ Sistema distribuido 
 ◦ Sistema multiprocesador 
 ◦ Sistema de un solo procesado
