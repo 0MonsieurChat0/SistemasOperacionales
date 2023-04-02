@@ -40,5 +40,11 @@ Los recursos que se deben gestionar en este tipo de servicios incluyen la memori
 
 ## 4. Compare las diferencias entre multiprocesamiento simétrico y asimétrico.
 
-***  ***
+En sus diferencias más remarcables podemos encontrar las siguientes:
+
+***◦ Diseño del sistema:***
+###Multiprocesamiento simétrico (SMP):
+- Todos los procesadores comparten los mismos recursos del sistema, también tienen la misma capacidad y función e incluso accede a los mismo recursos del sistema.
+###Multiprocesamiento asimétrico (ASMP):
+- 
 
