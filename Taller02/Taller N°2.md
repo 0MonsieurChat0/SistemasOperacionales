@@ -88,21 +88,37 @@ En sus diferencias más remarcables podemos encontrar las siguientes:
 
 En los sistemas operativos, las excepciones se emplea como una interrupción en el procesador el cual notifica al sistema operativo de un suceso importante.
 Cuando para un proceso se utiliza una instrucción para dividir un valor utilizando el cero como denominador genera un error y este lo notifica.
+Las interrupciones son causadas por eventos externos a la CPU, en general los errores tampoco afectan a los programas que se encuentre ejecutando en el momento.
 Por otra parte, las interrupciones son un mecanismo de comunicación entre el procesador y los dispositivos de entrada y salida, indican que la operación de la que se estaba ocupando la CPU ya ha terminado. 
-La principal diferencia entre estos dos conceptos es que las interrupciones son interrupciones de hardware, mientras que las excepciones son interrupciones del software.
+La principal diferencia entre estos dos conceptos es que las interrupciones son interrupciones de hardware, mientras que las excepciones son interrupciones que afectan directamente al software.
 
 ## 7. El DMA (acceso directo a memoria) se usa en dispositivos I/O para evitar uso innecesario de la CPU.
 
 ◦ ¿Como interactuá la CPU con el dispositivo para coordinar la transferencia? 
-Principalmente el que coordina la transferencia es el DMA. Inicialmente, el dispositivo que necesita tranferir datos envía una señal de solicitud al DMA. A su vez, el DMA se comunica con la CPU para obtener permiso para acceder a la memoria, al recibir la señal HLDA, es decir, el permiso de la CPU, se coordina la transferencia de datos entre el dispositivo y la memoria, sin intervención de la CPU.
+
+1. La CPU envía una solicitud al controlador de dispositivo para iniciar una operación de transferencia de datos.
+
+2. El controlador de dispositivo interactúa con el dispositivo y envía una señal para indicar que se iniciará la operación de transferencia.
+
+3. El controlador de dispositivo configura el dispositivo para realizar la operación de transferencia según lo especificado por la CPU.
+
+4. El dispositivo lee o escribe los datos solicitados.
+
+5. Cuando se completa la transferencia, el dispositivo envía una señal al controlador de dispositivo indicando que la operación ha finalizado.
+
+6. El controlador de dispositivo informa a la CPU que la operación de transferencia se ha completado y proporciona los datos transferidos.
+
+7. La CPU utiliza los datos transferidos según sea necesario para ejecutar la tarea solicitada.
 
 ◦ ¿Como sabe la CPU que las operaciones de memoria se han completado?
-Una vez se haya completado la configuración del DMA, se hayan transferido los datos entre el dispositivo y la memoria, y se haya monitoreado que la transferencia de datos se haya completado correctamente, el DMA notifica a la CPU mediante una interrupción generada por un pin dedicado en el DMA y se envía al controlador de interrupciones del sistema, luego el controlador de interrupciones interrumpe la CPU para que pueda tomar las medidas necesarias en consecuencia y procesar los datos transferidos, también prepara el DMA para la próxima transferencia.
+
+Cuando se completa la configuración del DMA, se puede visualizar que los datos se han transferido al dispositivo y a la memoria, y se haya monitoreado que la transferencia de datos se haya completado correctamente, el DMA notifica a la CPU mediante una interrupción generada por un pin dedicado en el DMA y se envía al controlador de interrupciones del sistema, luego el controlador de interrupciones interrumpe la CPU para que pueda tomar las medidas necesarias en consecuencia y procesar los datos transferidos, también prepara el DMA para la próxima transferencia.
 
 ## 8. Identifique dos razones por las que la cache es útil. ¿Qué problemas resuelve y causa?
 
 La caché es una memoria de muy alta velocidad, puede acelerar el CPU. Debido a ser de tan alta velocidad se encarga de almacenar información e instrucciones para que el procesador acceda a éstas de manera inmediata siempre que lo necesite.
-Sin embargo, puede causar problemas como la inconsistencia de datos, debido a una desincronización con la memoria principal, lo que llevaría a que la CPU acceda a datos incorrectos u obsoletos; cuando se produce un fallo en la caché aumenta significativamente el tiempo de acceso a los datos, también aumenta el costo del hardware.
+El caché tiene una capacidad limitada y más costosa que la memoria principal o el almacenamiento, por lo que se requieren políticas para decidir qué datos se almacenan, dónde se almacenan y cuándo se eliminan de la caché.
+En algunos casos es la causa de problemas como la inconsistencia de datos, debido a una desincronización con la memoria principal.
 
 ## 9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos: 
 
