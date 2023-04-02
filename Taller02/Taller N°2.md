@@ -36,7 +36,7 @@ Los recursos que se deben gestionar en este tipo de servicios incluyen la memori
 
 **◦ Servidor:** Es necesario cuando se pretende alojar sitios o plaicativos web, estos a su vez deben presentar un servicio estable además que tambien debe ser seguro para los usuarios, de modo que se garantice la disponibilidad para el usuario a cualquier momento, el acceso seguro y eficiente.
 
-**◦ Para un PC:** En la edición de audio y video se manejan aplicaciones que requieren una gran cantidad en potencia de procesamiento y memoria. Un sistemas operativo está en la capacidad de proporcionar una plataforma eficiente que ejecute aplicaciones de edición para este ámbito y permite que los usuarios realicen tareas complejas de edición y creación de contenido de manera eficiente y a su vez debe proporcionar una interfaz intuitiva y fácil de usar para los usuarios.
+***◦ Para un PC:*** En la edición de audio y video se manejan aplicaciones que requieren una gran cantidad en potencia de procesamiento y memoria. Un sistemas operativo está en la capacidad de proporcionar una plataforma eficiente que ejecute aplicaciones de edición para este ámbito y permite que los usuarios realicen tareas complejas de edición y creación de contenido de manera eficiente y a su vez debe proporcionar una interfaz intuitiva y fácil de usar para los usuarios.
 
 ## 4. Compare las diferencias entre multiprocesamiento simétrico y asimétrico.
 
@@ -44,34 +44,34 @@ En sus diferencias más remarcables podemos encontrar las siguientes:
 
 **◦ Diseño del sistema:**
 
-*Multiprocesamiento simétrico (SMP):*
+*- Multiprocesamiento simétrico (SMP):*
 - Todos los procesadores comparten los mismos recursos del sistema, también tienen la misma capacidad y función e incluso accede a los mismo recursos del sistema.
 
-*Multiprocesamiento asimétrico (ASMP):*
+*- Multiprocesamiento asimétrico (ASMP):*
 - Todos los procesadores de dividen en grupos y cada uno tiene una función y tarea específica, y cada uno tiene recursos del sistema.
 
 **◦ Escalabilidad:**
 
-*Multiprocesamiento simétrico (SMP):*
+*- Multiprocesamiento simétrico (SMP):*
 - Una de sus caracteristicas principales es qe tiene gran afinidad y escalabilidad, permitiendo agregar procesadores adicionales al sistema y además de aumentar la capacidad de procesamiento.
 
-*Multiprocesamiento asimétrico (ASMP):*
+*- Multiprocesamiento asimétrico (ASMP):*
 - Este no es tan fácilmente escalable ya que los procesadores son diseñados para cumplir funciones predeterminadas que incluso añadiendo nuevos procesadores no se verá afectado el rendimiento de la misma.
 
 **◦ Rendimiento:**
 
-*Multiprocesamiento simétrico (SMP):*
+*- Multiprocesamiento simétrico (SMP):*
 - Tienen mejor rendimiento en tareas que requieren una abundante cantidad de procesamiento paralelo ya que pues en conjunto cuando todos los procesadores trabajan en simultaneo se nota el aumento de rendimiento.
 
-*Multiprocesamiento asimétrico (ASMP):*
+*- Multiprocesamiento asimétrico (ASMP):*
 - Tiene un mejor rendimiento en tareas que se pueden dividir en tareas más pequeñas, ya que cada grupo de procesadores puede trabajar en diferentes tareas simultáneamente.
 
 **◦ Costo:**
 
-*Multiprocesamiento simétrico (SMP):*
+*- Multiprocesamiento simétrico (SMP):*
 - Suele ser más costoso debido a que los procesadores tienen las mismas capacidades y funciones por lo que en muchos casos se desperdician recuersos
 
-*Multiprocesamiento asimétrico (ASMP):*
+*- Multiprocesamiento asimétrico (ASMP):*
 - Debido a que los procesadores para este tipo de tecnología está focalizada para cumplir con los requeriemintos no se hace desperdicio de recursos.
 
 ## 5. Enumere los requerimientos para que dos maquinas se junten en un cluster y provean un servicio de alta disponibilidad (HA).
