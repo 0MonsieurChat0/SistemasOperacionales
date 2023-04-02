@@ -86,7 +86,8 @@ En sus diferencias más remarcables podemos encontrar las siguientes:
 
 ## 6. Compare las diferencias entre una excepción y una interrupción.
 
-En los sistemas operativos, las excepciones son un tipo de interrupción que emplea el procesador para notificar al sistema operativo de un suceso excepcional, por ejemplo, cuando en un proceso se utiliza una instrucción para dividir un valor utilizando el cero como denominador.  
+En los sistemas operativos, las excepciones se emplea como una interrupción en el procesador el cual notifica al sistema operativo de un suceso importante.
+Cuando para un proceso se utiliza una instrucción para dividir un valor utilizando el cero como denominador genera un error y este lo notifica.
 Por otra parte, las interrupciones son un mecanismo de comunicación entre el procesador y los dispositivos de entrada y salida, indican que la operación de la que se estaba ocupando la CPU ya ha terminado. 
 La principal diferencia entre estos dos conceptos es que las interrupciones son interrupciones de hardware, mientras que las excepciones son interrupciones del software.
 
