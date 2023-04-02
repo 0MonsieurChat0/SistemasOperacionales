@@ -42,9 +42,38 @@ Los recursos que se deben gestionar en este tipo de servicios incluyen la memori
 
 En sus diferencias más remarcables podemos encontrar las siguientes:
 
-***◦ Diseño del sistema:***
+**◦ Diseño del sistema:**
+
 *Multiprocesamiento simétrico (SMP):*
 - Todos los procesadores comparten los mismos recursos del sistema, también tienen la misma capacidad y función e incluso accede a los mismo recursos del sistema.
+
 *Multiprocesamiento asimétrico (ASMP):*
-- 
+- Todos los procesadores de dividen en grupos y cada uno tiene una función y tarea específica, y cada uno tiene recursos del sistema.
+
+**◦ Escalabilidad:**
+
+*Multiprocesamiento simétrico (SMP):*
+- Una de sus caracteristicas principales es qe tiene gran afinidad y escalabilidad, permitiendo agregar procesadores adicionales al sistema y además de aumentar la capacidad de procesamiento.
+
+*Multiprocesamiento asimétrico (ASMP):*
+- Este no es tan fácilmente escalable ya que los procesadores son diseñados para cumplir funciones predeterminadas que incluso añadiendo nuevos procesadores no se verá afectado el rendimiento de la misma.
+
+**◦ Rendimiento:**
+
+*Multiprocesamiento simétrico (SMP):*
+- Tienen mejor rendimiento en tareas que requieren una abundante cantidad de procesamiento paralelo ya que pues en conjunto cuando todos los procesadores trabajan en simultaneo se nota el aumento de rendimiento.
+
+*Multiprocesamiento asimétrico (ASMP):*
+- Tiene un mejor rendimiento en tareas que se pueden dividir en tareas más pequeñas, ya que cada grupo de procesadores puede trabajar en diferentes tareas simultáneamente.
+
+**◦ Costo:**
+
+*Multiprocesamiento simétrico (SMP):*
+- Suele ser más costoso debido a que los procesadores tienen las mismas capacidades y funciones por lo que en muchos casos se desperdician recuersos
+
+*Multiprocesamiento asimétrico (ASMP):*
+- Debido a que los procesadores para este tipo de tecnología está focalizada para cumplir con los requeriemintos no se hace desperdicio de recursos.
+
+## 5. Enumere los requerimientos para que dos maquinas se junten en un cluster y provean un servicio de alta disponibilidad (HA).
+
 
