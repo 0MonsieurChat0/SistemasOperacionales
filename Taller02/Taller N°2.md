@@ -17,17 +17,17 @@ Como se dijo en la respuesta número 2 del anterior punto, si bien es posible qu
 
 ## 2. Un problema común en los OS es la utilización de recursos. Enumere los recursos que deben gestionarse en las siguientes maquina (explique porqué):
 
-◦ Sistemas embebidos/integrado: Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
+**◦ Sistemas embebidos/integrado:** Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
 Estos sistemás pueden ser microcontroladores o microprocesadores o pueden usar leguajes como C y C++. Por lo general están diseñados para hacer computación en tiempo real, además se sabe que estos incluyen la memoria, la CPU, almacenamiento y además de ello es muy importante el control adecuado de la energía.
 
-◦ Mainframe: Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
+**◦ Mainframe:** Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
 Sus entre los recursos más importantes a tener en cuenta al momento de gestionar un mainframe se encuentran la CPS, la red, el almacenamiento, la memoría y algunos de los dispositivos de entrada y salida.
 
-◦ Workstation: Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
+**◦ Workstation:** Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
 Como en los anteriores, los recursos importantes a tener en cuenta para el manejo de los mismos son la memoria, la CPU, almacenamiento  y además de la tarjera gráfica.
 
-◦ Server: En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
+**◦ Server:** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
 Los recursos de gran importacia que se gestionan para estas infraestructuras son la memoria, el almacenamiento de gran cantidad de información en muchos casos, la CPU, también en la red y otros dispositivos de entrada y salida.
 
-◦ Mobile: 
+**◦ Mobile:** 
 
