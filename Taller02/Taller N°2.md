@@ -122,6 +122,8 @@ En algunos casos es la causa de problemas como la inconsistencia de datos, debid
 
 ## 9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos: 
 
-◦ Sistema distribuido 
-◦ Sistema multiprocesador 
-◦ Sistema de un solo procesado
+***◦ Sistema distribuido:***  varios nodos pueden tener copias de los mismos datos, y estos datos pueden ser actualizados por cualquier nodo en cualquier momento. Esto plantea un problema de coherencia de caché, ya que los nodos pueden tener copias diferentes de los datos en sus cachés, y estas copias pueden ser inconsistentes.
+
+***◦ Sistema multiprocesador:*** Cuando los procesadores tienen una variable almacenada en sus cachés locales y alguno de los involucrados la incrementa y la escribe en la memoria principal, el otro procesador debe leer el nuevo valor y decidir si procesarla o invalidar su copia.
+
+***◦ Sistema de un solo procesado:*** Cuando el dato es econtrado en caché y lo modifica y lo escribe en otro caché, debe escribir también el dato en un tercer caché o en la memoria principal.
