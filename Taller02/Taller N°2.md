@@ -17,24 +17,24 @@ Como se dijo en la respuesta número 2 del anterior punto, si bien es posible qu
 
 ## 2. Un problema común en los OS es la utilización de recursos. Enumere los recursos que deben gestionarse en las siguientes maquina (explique porqué):
 
-**◦ Sistemas embebidos/integrado:** Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
+***◦ Sistemas embebidos/integrado:*** Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
 Estos sistemás pueden ser microcontroladores o microprocesadores o pueden usar leguajes como C y C++. Por lo general están diseñados para hacer computación en tiempo real, además se sabe que estos incluyen la memoria, la CPU, almacenamiento y además de ello es muy importante el control adecuado de la energía.
 
-**◦ Mainframe:** Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
+***◦ Mainframe:*** Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
 Sus entre los recursos más importantes a tener en cuenta al momento de gestionar un mainframe se encuentran la CPS, la red, el almacenamiento, la memoría y algunos de los dispositivos de entrada y salida.
 
-**◦ Workstation:** Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
+***◦ Workstation:*** Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
 Como en los anteriores, los recursos importantes a tener en cuenta para el manejo de los mismos son la memoria, la CPU, almacenamiento  y además de la tarjera gráfica.
 
-**◦ Server:** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
+***◦ Server:*** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
 Los recursos de gran importacia que se gestionan para estas infraestructuras son la memoria, el almacenamiento de gran cantidad de información en muchos casos, la CPU, también en la red y otros dispositivos de entrada y salida.
 
-**◦ Mobile:** Para los dispositivos móviles como celulares, tablets e incluso los nuevos relojes smart debido a su estructura tan compacta presentan grandes problemas en términos de memoria, capacidad de procesamiento y almacenamiento.
+***◦ Mobile:*** Para los dispositivos móviles como celulares, tablets e incluso los nuevos relojes smart debido a su estructura tan compacta presentan grandes problemas en términos de memoria, capacidad de procesamiento y almacenamiento.
 Los recursos que se deben gestionar en este tipo de servicios incluyen la memoria, CPU, bateria, almacenamiento y lo dispositivos de entrada y salida.
 
 ## 3. Caracterice dos casos de uso para implementar un OS para servidor y PC.
 
-**◦ Servidor:** Es necesario cuando se pretende alojar sitios o plaicativos web, estos a su vez deben presentar un servicio estable además que tambien debe ser seguro para los usuarios, de modo que se garantice la disponibilidad para el usuario a cualquier momento, el acceso seguro y eficiente.
+***◦ Servidor:*** Es necesario cuando se pretende alojar sitios o plaicativos web, estos a su vez deben presentar un servicio estable además que tambien debe ser seguro para los usuarios, de modo que se garantice la disponibilidad para el usuario a cualquier momento, el acceso seguro y eficiente.
 
 ***◦ Para un PC:*** En la edición de audio y video se manejan aplicaciones que requieren una gran cantidad en potencia de procesamiento y memoria. Un sistemas operativo está en la capacidad de proporcionar una plataforma eficiente que ejecute aplicaciones de edición para este ámbito y permite que los usuarios realicen tareas complejas de edición y creación de contenido de manera eficiente y a su vez debe proporcionar una interfaz intuitiva y fácil de usar para los usuarios.
 
@@ -76,9 +76,35 @@ En sus diferencias más remarcables podemos encontrar las siguientes:
 
 ## 5. Enumere los requerimientos para que dos maquinas se junten en un cluster y provean un servicio de alta disponibilidad (HA).
 
-- Sistema operativo: Las máquinas deben ejecutar el mismo sistema operativo e igual versión, además que se debe configurar de manera similar
+***- Sistema operativo:*** Las máquinas deben ejecutar el mismo sistema operativo e igual versión, además que se debe configurar de manera similar
 
-- Hardware: Las máquinas deben tener hardware similar o compatible de modo que se pueda garantizar que los recursos para el sistema sea posible compartirlos sin problemas.
+***- Hardware:*** Las máquinas deben tener hardware similar o compatible de modo que se pueda garantizar que los recursos para el sistema sea posible compartirlos sin problemas.
 
-- Monitorización y alertas: Se deben implementar herramientas de monitorización y alertas para detectar y notificar cualquier problema en el clúster.
+***- Monitorización y alertas:*** Es necesario implementar herramientas de monitorización y alertas para detectar y notificar cualquier problema en el clúster.
 
+***- Copias de seguridad:*** Cuado se implementan las copias de seguridad y además se hacen planeas adecuados en caso de perdida de datos que puedan garantizar que los datos estén protegidos y además de eso también sea posible la restauración rápidamente en caso de una falla en el clúster, es ahí cuando relamente se ofrece un servicio de calidad.
+
+
+## 6. Compare las diferencias entre una excepción y una interrupción.
+
+En los sistemas operativos, las excepciones son un tipo de interrupción que emplea el procesador para notificar al sistema operativo de un suceso excepcional, por ejemplo, cuando en un proceso se utiliza una instrucción para dividir un valor utilizando el cero como denominador.  
+Por otra parte, las interrupciones son un mecanismo de comunicación entre el procesador y los dispositivos de entrada y salida, indican que la operación de la que se estaba ocupando la CPU ya ha terminado. 
+La principal diferencia entre estos dos conceptos es que las interrupciones son interrupciones de hardware, mientras que las excepciones son interrupciones del software.
+
+## 7. El DMA (acceso directo a memoria) se usa en dispositivos I/O para evitar uso innecesario de la CPU.
+
+◦ ¿Como interactuá la CPU con el dispositivo para coordinar la transferencia? 
+Principalmente el que coordina la transferencia es el DMA. Inicialmente, el dispositivo que necesita tranferir datos envía una señal de solicitud al DMA. A su vez, el DMA se comunica con la CPU para obtener permiso para acceder a la memoria, al recibir la señal HLDA, es decir, el permiso de la CPU, se coordina la transferencia de datos entre el dispositivo y la memoria, sin intervención de la CPU.
+
+◦ ¿Como sabe la CPU que las operaciones de memoria se han completado?
+Una vez se haya completado la configuración del DMA, se hayan transferido los datos entre el dispositivo y la memoria, y se haya monitoreado que la transferencia de datos se haya completado correctamente, el DMA notifica a la CPU mediante una interrupción generada por un pin dedicado en el DMA y se envía al controlador de interrupciones del sistema, luego el controlador de interrupciones interrumpe la CPU para que pueda tomar las medidas necesarias en consecuencia y procesar los datos transferidos, también prepara el DMA para la próxima transferencia.
+
+## 8. Identifique dos razones por las que la cache es útil. ¿Qué problemas resuelve y causa?
+
+La caché es una memoria de muy alta velocidad, puede acelerar el CPU. Debido a ser de tan alta velocidad se encarga de almacenar información e instrucciones para que el procesador acceda a éstas de manera inmediata siempre que lo necesite.
+Sin embargo, puede causar problemas como la inconsistencia de datos, debido a una desincronización con la memoria principal, lo que llevaría a que la CPU acceda a datos incorrectos u obsoletos; cuando se produce un fallo en la caché aumenta significativamente el tiempo de acceso a los datos, también aumenta el costo del hardware.
+
+9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos: 
+◦ Sistema distribuido 
+◦ Sistema multiprocesador 
+◦ Sistema de un solo procesado
