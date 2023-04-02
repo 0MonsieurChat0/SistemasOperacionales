@@ -29,5 +29,6 @@ Como en los anteriores, los recursos importantes a tener en cuenta para el manej
 ***◦ Server:*** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
 Los recursos de gran importacia que se gestionan para estas infraestructuras son la memoria, el almacenamiento de gran cantidad de información en muchos casos, la CPU, también en la red y otros dispositivos de entrada y salida.
 
-***◦ Mobile:*** 
+***◦ Mobile:*** Para los dispositivos móviles como celulares, tablets e incluso los nuevos relojes smart debido a su estructura tan compacta presentan grandes problemas en términos de memoria, capacidad de procesamiento y almacenamiento.
+Los recursos que se deben gestionar en este tipo de servicios incluyen la memoria, CPU, bateria, almacenamiento y lo dispositivos de entrada y salida.
 
