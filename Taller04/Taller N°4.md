@@ -8,7 +8,7 @@
 
 ## 2. Enumere cinco servicios proporcionados por el OS diseñados para facilitar la comodidad del usuario.
 
-*. Interfaz de usuario.*
+*- Interfaz de usuario.*
 
 *- Ejecución de programas.*
 
