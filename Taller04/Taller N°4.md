@@ -52,61 +52,108 @@ Es importante tener en cuenta que el proceso de generación de un informe de tie
 - El OS debe permitee a los usuarios y las aplicaciones leer y escribir datos en los archivos que existen en el el sistema. Archivos almacenados, así como la actualización de los datos en el archivos, lo cual implica que el OS debe hacer la busqueda en memoria del archivo y traerlo a disposición del usuario.
 
 *- Renombrar/mover archivos:*
-- El OS debe permitir a los usuarios y las aplicaciones reb¿nombrar y mover archivos dentro del sistema de archivos, debe contener funciones como nombres y ubicaciones
+- El OS debe permitir a los usuarios y las aplicaciones reb¿nombrar y mover archivos dentro del sistema de archivos, debe contener funciones como nombres y ubicaciones de los archivos en el sistema y la actualización de las referencias a los archivos de ellos mismos en otros.
+
+*- Renombrar/mover archivos:*
+- El OS debe permitir la gestión de permisos y atributos de archivos para controlar el acceso, la seguridad y otras propiedades de los archivos.
 
 
+## 5. Compare las ventajas y desventajas de usar la misma interfaz de llamadas al sistema para la manipulación de archivos como de dispositivos.
 
-## 5. Enumere los requerimientos para que dos maquinas se junten en un cluster y provean un servicio de alta disponibilidad (HA).
+# Ventajas
 
-***- Sistema operativo:*** Las máquinas deben ejecutar el mismo sistema operativo e igual versión, además que se debe configurar de manera similar
+***- Simplificación de la programación:***
 
-***- Hardware:*** Las máquinas deben tener hardware similar o compatible de modo que se pueda garantizar que los recursos para el sistema sea posible compartirlos sin problemas.
+Si se le da uso a la misma interfaz de llamadas al sistema en cuanto a la manipulación de datos, archivos y dospositivos es posible simplificar la programación de aplicacoiones, ya que los que se encargan de hacer el desarrollo de estos sistemas solo deben aprender a usar uan única interfaz
 
-***- Monitorización y alertas:*** Es necesario implementar herramientas de monitorización y alertas para detectar y notificar cualquier problema en el clúster.
+***- Mayor portabilidad:*** 
 
-***- Copias de seguridad:*** Cuado se implementan las copias de seguridad y además se hacen planeas adecuados en caso de perdida de datos que puedan garantizar que los datos estén protegidos y además de eso también sea posible la restauración rápidamente en caso de una falla en el clúster, es ahí cuando relamente se ofrece un servicio de calidad.
+Si la misma interfaz de llamadas al sistema se utiliza para la manipulación de archivos y dispositivos en diferentes sistemas operativos, esto puede aumentar la portabilidad del código fuente de las aplicaciones. Las aplicaciones desarrolladas en una plataforma serán fácilmente portables a otras plataformas sin verse en la necesidad de reescribir completamente el código relacionado con la manipulación de archivos y dispositivos.
 
-## 6. Compare las diferencias entre una excepción y una interrupción.
+***- Mayor flexibilidad:*** 
+Cuando se hace uso de la misma interfaz de llamadas al sistema para la manipulación de archivos y dispositivos, brindará mayor flexibilidad a las aplicaciones, ya que permite un enfoque más generalizado para el acceso a recursos del sistema.
 
-En los sistemas operativos, las excepciones se emplea como una interrupción en el procesador el cual notifica al sistema operativo de un suceso importante.
-Cuando para un proceso se utiliza una instrucción para dividir un valor utilizando el cero como denominador genera un error y este lo notifica.
-Las interrupciones son causadas por eventos externos a la CPU, en general los errores tampoco afectan a los programas que se encuentre ejecutando en el momento.
-Por otra parte, las interrupciones son un mecanismo de comunicación entre el procesador y los dispositivos de entrada y salida, indican que la operación de la que se estaba ocupando la CPU ya ha terminado. 
-La principal diferencia entre estos dos conceptos es que las interrupciones son interrupciones de hardware, mientras que las excepciones son interrupciones que afectan directamente al software.
+# Desventajas
 
-## 7. El DMA (acceso directo a memoria) se usa en dispositivos I/O para evitar uso innecesario de la CPU.
+***- Dificultad en la gestión de recursos:***
 
-◦ ¿Como interactuá la CPU con el dispositivo para coordinar la transferencia? 
+Cuando los archivos y los dispositivos pertenecen a recursos diferentes y poseen características y comportamientos distintos. El uso de la misma interfaz de llamadas al sistema para ambos puede complicar la gestión de recursos, ya que puede haber diferencias en la forma en que se accede, se controla y se gestionan los recursos de archivos y dispositivos. Esto puede llevar a un código más complejo y difícil de mantener.
 
-1. La CPU envía una solicitud al controlador de dispositivo para iniciar una operación de transferencia de datos.
+***- Pérdida de funcionalidades específicas:*** 
 
-2. El controlador de dispositivo interactúa con el dispositivo y envía una señal para indicar que se iniciará la operación de transferencia.
+Los archivos y los dispositivos pueden tener funcionalidades específicas que no son compatibles con una misma interfaz de llamadas al sistema. Por ejemplo, algunos dispositivos pueden tener características de hardware específicas que no se pueden acceder o controlar mediante una interfaz de llamadas al sistema genérica. Esto puede limitar la funcionalidad de las aplicaciones que necesitan acceder a características específicas de dispositivos.
 
-3. El controlador de dispositivo configura el dispositivo para realizar la operación de transferencia según lo especificado por la CPU.
 
-4. El dispositivo lee o escribe los datos solicitados.
+## **6. Conteste las siguientes preguntas.
 
-5. Cuando se completa la transferencia, el dispositivo envía una señal al controlador de dispositivo indicando que la operación ha finalizado.
+#### * **Cuál es el propósito del interprete de comandos?**
+La interfaz de línea de comandos (CLI, por sus siglas en inglés) es una forma en la que los usuarios pueden interactuar con la máquina a través de comandos de texto en lugar de una interfaz gráfica de usuario. El sistema operativo interpreta y ejecuta las instrucciones dadas por el intérprete de comandos en función de lo que se escribe en la terminal. Esto permite al usuario enviar comandos al sistema operativo y ejecutar acciones correspondientes a través de la línea de comandos.
 
-6. El controlador de dispositivo informa a la CPU que la operación de transferencia se ha completado y proporciona los datos transferidos.
+#### * **Por qué está separado del kernel?**
+La separación entre el intérprete de comandos y el kernel en un sistema operativo se realiza para lograr mayor flexibilidad y mantenibilidad del sistema. Además, contribuye a la seguridad del sistema operativo, ya que el intérprete generalmente se ejecuta con privilegios más bajos que el kernel, lo que implica restricciones de seguridad para proteger el sistema y los datos. Esta separación también permite la posibilidad de utilizar diferentes intérpretes de comandos con un mismo kernel, o viceversa, lo que brinda opciones y flexibilidad en la configuración del sistema operativo.
 
-7. La CPU utiliza los datos transferidos según sea necesario para ejecutar la tarea solicitada.
+#### * **Liste los requisitos para desarrollar un interprete de comandos.**
+Los requisitos para implementar un intérprete de comandos pueden variar según el sistema operativo y el entorno de desarrollo. Algunos posibles requisitos son:
+- Conocimientos sólidos en programación, ya que el intérprete requiere de técnicas de programación adecuadas.- Conocimientos en el sistema operativo en el que se quiere implementar, tales como, la estructura del OS, el funcionamiento del kernel, la administración de procesos, gestión de memoria y otros conceptos relevantes del SO.
+- onocimientos en el sistema operativo en el que se desea implementar, incluyendo la estructura del sistema operativo, el funcionamiento del kernel, la administración de procesos, la gestión de memoria y otros conceptos relevantes.
+- Diseño de comandos, opciones, sintaxis, manejo de errores, historial de comandos, autocompletado y otros elementos de interfaz que brinden comodidad al usuario.
+- Análisis y procesamiento de comandos, para ser capaz de analizar y procesar los comandos de manera precisa, incluyendo la sintaxis y la interpretación de los argumentos.
+- Gestión de procesos y comunicación del sistema operativo, como la administración y terminación de procesos, redirección de entrada/salida, manipulación de variables de entorno y gestión de servicios.
+- Gestión de errores, proporcionando mensajes de error claros y útiles al usuario en caso de comandos incorrectos o problemas en la ejecución.
+- Documentación y soporte en donde todo esté bien especificado como la instrucciones de instalación, guía de uso, descripción de comandos y otras instrucciones relevantes para los usuarios.
 
-◦ ¿Como sabe la CPU que las operaciones de memoria se han completado?
+## 7. Compare las ventajas y desventajas de los modelos de intercomunicación.
 
-Cuando se completa la configuración del DMA, se puede visualizar que los datos se han transferido al dispositivo y a la memoria, y se haya monitoreado que la transferencia de datos se haya completado correctamente, el DMA notifica a la CPU mediante una interrupción generada por un pin dedicado en el DMA y se envía al controlador de interrupciones del sistema, luego el controlador de interrupciones interrumpe la CPU para que pueda tomar las medidas necesarias en consecuencia y procesar los datos transferidos, también prepara el DMA para la próxima transferencia.
+#### * **Modelo de señales/interrupciones**
+***Ventajas:***
+- Es simple y eficiente en términos de uso de recursos del sistema.
+- Permite una comunicación rápida y asincrónica entre procesos.
+- Es ampliamente utilizado en sistemas operativos embebidos y en sistemas de tiempo real.
 
-## 8. Identifique dos razones por las que la cache es útil. ¿Qué problemas resuelve y causa?
+***Desventajas:***
+- Puede ser limitado en términos de la cantidad y tipo de información que se puede transmitir a través de señales o interrupciones.
+- Puede ser difícil de depurar y mantener en sistemas complejos con múltiples señales e interrupciones.
 
-La caché es una memoria de muy alta velocidad, puede acelerar el CPU. Debido a ser de tan alta velocidad se encarga de almacenar información e instrucciones para que el procesador acceda a éstas de manera inmediata siempre que lo necesite.
-El caché tiene una capacidad limitada y más costosa que la memoria principal o el almacenamiento, por lo que se requieren políticas para decidir qué datos se almacenan, dónde se almacenan y cuándo se eliminan de la caché.
-En algunos casos es la causa de problemas como la inconsistencia de datos, debido a una desincronización con la memoria principal.
+#### **Modelo de mensajes**
+***- Ventajas:***
+- Puede ser utilizado para implementar una amplia gama de patrones de comunicación, como paso de mensajes, publicación/suscripción, y solicitud/respuesta.
+- Permite la comunicación entre procesos de forma más flexible y versátil, ya que se pueden transmitir mensajes de diferentes tamaños y tipos.
 
-## 9. Explique con un ejemplo, como se manifiesta el problema de mantener la coherencia de los datos de cache en los siguientes entornos: 
+***- Desventajas:***
+- Puede ser más complejo de implementar y depurar en comparación con otros modelos de intercomunicación más simples.
+- Puede requerir una mayor sincronización y gestión de la comunicación entre procesos para evitar problemas de concurrencia y seguridad.
 
-***◦ Sistema distribuido:***  varios nodos pueden tener copias de los mismos datos, y estos datos pueden ser actualizados por cualquier nodo en cualquier momento. Esto plantea un problema de coherencia de caché, ya que los nodos pueden tener copias diferentes de los datos en sus cachés, y estas copias pueden ser inconsistentes.
+#### * **Modelo de sockets**
+***Ventajas:***
+- Proporciona una interfaz estándar para la comunicación de red en sistemas operativos, lo que permite la interoperabilidad y la comunicación entre sistemas heterogéneos.
+- Facilita la implementación de aplicaciones de red, como servidores y clientes, de manera modular y escalable.
 
-***◦ Sistema multiprocesador:*** Cuando los procesadores tienen una variable almacenada en sus cachés locales y alguno de los involucrados la incrementa y la escribe en la memoria principal, el otro procesador debe leer el nuevo valor y decidir si procesarla o invalidar su copia.
+***Desventajas:***
+- Puede tener problemas de seguridad y privacidad si no se gestionan adecuadamente las conexiones y la comunicación en red.
+- Puede tener un mayor overhead en términos de uso de recursos del sistema, debido a la encapsulación y desencapsulación de datos en la capa de red.
 
-***◦ Sistema de un solo procesado:*** Cuando el dato es econtrado en caché y lo modifica y lo escribe en otro caché, debe escribir también el dato en un tercer caché o en la memoria principal.
+## 8. Conteste las siguientes preguntas.
 
+#### * **Cual es la principal ventaja de usar microkernel en el diseño del OS?**
+Es más fácil de modificar ya que al ser más pequeño es más simple, por lo tanto es más fácil de entender y depurar, y se encarga de proporcionar únicamente las funcionalidades básicas. También permite que los servicios del SO se puedan descargar y cargar dinámicamente como módulos, permite mayor escalabilidad ya que los servicios se pueden distribuir en multiples nodos y facilita la construcción de sistemas distribuidos.
+
+#### * **Como interactúan los programas de usuario y los servicios del OS en una arquitectura 
+basada en microkernel?**
+Principalmente la comunicación sucede mediante el modelo de mensajes, es decir, los procesos se comunican intercambiando mensajes entre sí, los programas envían solicitudes al servicio del sistema y el servicio procesa la solicitud y devuelve una respuesta o realiza las acciones necesarias. Pero también se pueden utilizar otros métodos de comunicación que proporcione el microkernel. 
+
+#### * **Cuales son las desventajas de usar la arquitectura de microkernel?**
+- Posible reducción del rendimiento debido a la necesidad de comunicación entre procesos y el overhead asociado.
+- Una mayor complejidad en la implementación y depuración de los servicios del SO como los procesos de usuario.
+
+## **9. Compare las ventajas y desventajas de usar VM**
+
+***- Ventajas:***
+- Existe menor riesgo de afectar el equipo debido a que el ambiente aislado entre los sistemas operativos y las aplicaciones que se ejecutan en ellas no llegarán al sistema operativo principal.
+- Permite que sea posible ejecutar múltiples OS en una misma máquina física, por lo cual su versatilidad de mucho mayor.
+- Se pueden cambiar las particiones y el número de nucleos utilizados en cualquier momento para aprovechar de manera más optima los recursos de hardware.
+- Se pueden crear imagenes del OS y aplicaciones permitiendo la portabilidad de las maquinas virtuales entre diferentes entornos de hardware.
+
+***- Desventajas:***
+- Pérdida de rendimiento debido a la virtualización: Las máquinas virtuales pueden introducir un overhead de rendimiento debido a la virtualización de hardware, lo que significa que podría experimentarse una disminución en el rendimiento de las aplicaciones que se ejecutan en ellas. 
+- Si se utilizan múltiples sistemas operativos en un solo host a través de máquinas virtuales, la configuración y administración de estas máquinas puede volverse compleja. Esto se debe a que cada máquina virtual tiene sus propias configuraciones de sistema operativo, redes, almacenamiento, etc.
+- Aunque son raros, existen riesgos potenciales de seguridad asociados con la tecnología de virtualización. Esto incluye posibles vulnerabilidades en la tecnología de virtualización misma, amenazas dentro de las máquinas virtuales (por ejemplo, malware o ataques internos) y riesgos de fuga de información entre máquinas virtuales en un mismo host.
