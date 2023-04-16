@@ -60,7 +60,7 @@ Es importante tener en cuenta que el proceso de generación de un informe de tie
 
 ## 5. Compare las ventajas y desventajas de usar la misma interfaz de llamadas al sistema para la manipulación de archivos como de dispositivos.
 
-# Ventajas
+#### Ventajas
 
 ***- Simplificación de la programación:***
 
@@ -73,7 +73,7 @@ Si la misma interfaz de llamadas al sistema se utiliza para la manipulación de 
 ***- Mayor flexibilidad:*** 
 Cuando se hace uso de la misma interfaz de llamadas al sistema para la manipulación de archivos y dispositivos, brindará mayor flexibilidad a las aplicaciones, ya que permite un enfoque más generalizado para el acceso a recursos del sistema.
 
-# Desventajas
+#### Desventajas
 
 ***- Dificultad en la gestión de recursos:***
 
