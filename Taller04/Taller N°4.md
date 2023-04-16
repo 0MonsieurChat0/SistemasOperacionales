@@ -1,12 +1,12 @@
 # Solución Taller N°4
 ## 1. Las funciones y servicios proporcionados por el OS pueden dividirse en dos categorías, descríbalas.
 
-1. Funciones y servicios útiles al usuario: incluye la interfaz gráfica, la ejecución deprogramas, operaciones de E/S, file-system operation, communications, and 
+- Funciones y servicios útiles al usuario: incluye la interfaz gráfica, la ejecución deprogramas, operaciones de E/S, file-system operation, communications, and 
 
-2. Funciones y servicios para garantizar la eficiencia del propio sistema: asignaciónde recursos, responsabilidad, protección y seguridad.
+- Funciones y servicios para garantizar la eficiencia del propio sistema: asignaciónde recursos, responsabilidad, protección y seguridad.
 
 
-### ◦ Enumere cinco servicios proporcionados por el OS diseñados para facilitar la comodidad del usuario.
+## 2. Enumere cinco servicios proporcionados por el OS diseñados para facilitar la comodidad del usuario.
 
 *. Interfaz de usuario.*
 
@@ -18,6 +18,40 @@
 
 *- Detección de errores.*
 
+## 3. Describa como se puede generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa.
+
+Generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa generalmente implica el uso de herramientas de monitoreo y análisis del rendimiento del sistema operativo. Además se requiere de una serie de interrupciones periódicas del temporizador, en cadainterrupción se registra el valor de contador del programa, con interrupcionesfrecuentes de puede obtener una imagen estadística sobre varias partes de un programa :
+
+***◦ Selección de herramientas:*** 
+Identificar y seleccionar las herramientas apropiadas. Estas herramientas pueden incluir monitores de rendimiento integrados en el sistema operativo, software de monitoreo de terceros o herramientas de análisis de rendimiento específicas para el lenguaje de programación o entorno de desarrollo utilizado.
+
+***◦ Inicio del monitoreo:*** 
+Iniciar la herramienta de monitoreo seleccionada y configurarla para recopilar los datos relevantes sobre el tiempo y recursos consumidos por el programa. Esto puede incluir la monitorización del uso de la CPU, la memoria, el disco, la red y otros recursos del sistema que son importantes.
+
+***◦ Ejecución del programa:*** 
+Ejecutar el programa que se desea analizar y dejar que la herramienta de monitoreo registre los datos del rendimiento durante la ejecución del programa. Es importante asegurarse de que la herramienta de monitoreo esté registrando datos relevantes y en un nivel de detalle apropiado para el análisis estadístico.
+
+***◦ Recopilación de datos:*** 
+Después de que el programa haya finalizado su ejecución, detener la herramienta de monitoreo y recopilar los datos registrados durante la ejecución del programa. Estos datos pueden incluir información sobre el tiempo total de ejecución del programa, la cantidad de recursos consumidos (por ejemplo, uso de la CPU, la memoria utilizada, el tráfico de red, etc.) y otros indicadores relevantes del rendimiento del programa.
+
+Es importante tener en cuenta que el proceso de generación de un informe de tiempo y recursos consumidos por un programa puede variar dependiendo de las herramientas de las cuales se haga uso, el sistema operativo. Es esencial seguir las mejores prácticas y utilizar herramientas confiables y adecuadas para el análisis del rendimiento del sistema operacional.
+
+## 4. Enumere y describa cinco actividades de un OS enfocadas a la administración de archivos.
+
+*- Crear:*
+- a
+
+*- Borrar:*
+- a
+
+*- Abrir:*
+- a
+
+*- Leer/Escribir/Reposicionar:*
+- a
+
+*- Cerrar:*
+- a
 
 
 
@@ -25,36 +59,9 @@
 
 
 
-Como se dijo en la respuesta número 2 del anterior punto, si bien es posible que los sistemas compartidos puedan ser bastante seguros al implementar varias politicas de seguridad que los usuarios deben cumplir, además de mayores controles como por ejemplo la doble autenticación no es posible asegurar el mismo grado de seguridad en un sistema compartido con respecto a un sistema dedicado. Un sistema compartido está compuesto de varios usuarios quienes tienen acceso al mismo sistema y es por esto que hay más puntos de vulnerables potenciales para los atacantes o para errores humanos. 
 
-  Sí hacemos la comparación con un sistema dedicado, estos normalmente están restringidos solo para el acceso a un número predeterminado de usuarios autorizados y se les aplican políticas de seguridad más restrictivas. Logrando que sea mucho más fácil controlar y asegurar la información, lo cual hay menos riesgo de errores o intrusiones no autorizadas.
 
-## 2. Un problema común en los OS es la utilización de recursos. Enumere los recursos que deben gestionarse en las siguientes maquina (explique porqué):
 
-***◦ Sistemas embebidos/integrado:*** Es un sistema de computación diseñado para hacer tareas específicas que se encuentran integrados como un todo en lo que se llama comúnmente placa madre o plac abase.
-Estos sistemás pueden ser microcontroladores o microprocesadores o pueden usar leguajes como C y C++. Por lo general están diseñados para hacer computación en tiempo real, además se sabe que estos incluyen la memoria, la CPU, almacenamiento y además de ello es muy importante el control adecuado de la energía.
-
-***◦ Mainframe:*** Se puede decir qe son megacomputadoras de gran tamaño que a día de hoy son usadas en el entorno empresarial para encargarse del manejo de datos en grandes cantidades.
-Sus entre los recursos más importantes a tener en cuenta al momento de gestionar un mainframe se encuentran la CPS, la red, el almacenamiento, la memoría y algunos de los dispositivos de entrada y salida.
-
-***◦ Workstation:*** Son maquinas de alto rendimiento utilizadas mayormente en ambientes de diseño, edición de videos y muchos trabajos que requieren gran capacidad de procesamiento.
-Como en los anteriores, los recursos importantes a tener en cuenta para el manejo de los mismos son la memoria, la CPU, almacenamiento  y además de la tarjera gráfica.
-
-***◦ Server:*** En nuestro ámbito los servidores son uno de los más conocidos por su gran importancia en cualquier tipo de empresa, ya que estos son usados para alojar y distribuir aplicaciones de serviocios en la red.
-Los recursos de gran importacia que se gestionan para estas infraestructuras son la memoria, el almacenamiento de gran cantidad de información en muchos casos, la CPU, también en la red y otros dispositivos de entrada y salida.
-
-***◦ Mobile:*** Para los dispositivos móviles como celulares, tablets e incluso los nuevos relojes smart debido a su estructura tan compacta presentan grandes problemas en términos de memoria, capacidad de procesamiento y almacenamiento.
-Los recursos que se deben gestionar en este tipo de servicios incluyen la memoria, CPU, bateria, almacenamiento y lo dispositivos de entrada y salida.
-
-## 3. Caracterice dos casos de uso para implementar un OS para servidor y PC.
-
-***◦ Servidor:*** Es necesario cuando se pretende alojar sitios o plaicativos web, estos a su vez deben presentar un servicio estable además que tambien debe ser seguro para los usuarios, de modo que se garantice la disponibilidad para el usuario a cualquier momento, el acceso seguro y eficiente.
-
-***◦ Para un PC:*** En la edición de audio y video se manejan aplicaciones que requieren una gran cantidad en potencia de procesamiento y memoria. Un sistemas operativo está en la capacidad de proporcionar una plataforma eficiente que ejecute aplicaciones de edición para este ámbito y permite que los usuarios realicen tareas complejas de edición y creación de contenido de manera eficiente y a su vez debe proporcionar una interfaz intuitiva y fácil de usar para los usuarios.
-
-## 4. Compare las diferencias entre multiprocesamiento simétrico y asimétrico.
-
-En sus diferencias más remarcables podemos encontrar las siguientes:
 
 **◦ Diseño del sistema:**
 
