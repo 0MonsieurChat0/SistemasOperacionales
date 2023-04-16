@@ -20,18 +20,22 @@
 
 ## 3. Describa como se puede generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa.
 
-Generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa generalmente implica el uso de herramientas de monitoreo y análisis del rendimiento del sistema operativo. Además se requiere de una serie de interrupciones periódicas del temporizador, en cadainterrupción se registra el valor de contador del programa, con interrupcionesfrecuentes de puede obtener una imagen estadística sobre varias partes de un programa :
+Generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa generalmente implica el uso de herramientas de monitoreo y análisis del rendimiento del sistema operativo. Además se requiere de una serie de interrupciones periódicas del temporizador, en cadainterrupción se registra el valor de contador del programa, con interrupcionesfrecuentes de puede obtener una imagen estadística sobre varias partes de un programa.
 
 ***◦ Selección de herramientas:*** 
+
 Identificar y seleccionar las herramientas apropiadas. Estas herramientas pueden incluir monitores de rendimiento integrados en el sistema operativo, software de monitoreo de terceros o herramientas de análisis de rendimiento específicas para el lenguaje de programación o entorno de desarrollo utilizado.
 
 ***◦ Inicio del monitoreo:*** 
+
 Iniciar la herramienta de monitoreo seleccionada y configurarla para recopilar los datos relevantes sobre el tiempo y recursos consumidos por el programa. Esto puede incluir la monitorización del uso de la CPU, la memoria, el disco, la red y otros recursos del sistema que son importantes.
 
 ***◦ Ejecución del programa:*** 
+
 Ejecutar el programa que se desea analizar y dejar que la herramienta de monitoreo registre los datos del rendimiento durante la ejecución del programa. Es importante asegurarse de que la herramienta de monitoreo esté registrando datos relevantes y en un nivel de detalle apropiado para el análisis estadístico.
 
 ***◦ Recopilación de datos:*** 
+
 Después de que el programa haya finalizado su ejecución, detener la herramienta de monitoreo y recopilar los datos registrados durante la ejecución del programa. Estos datos pueden incluir información sobre el tiempo total de ejecución del programa, la cantidad de recursos consumidos (por ejemplo, uso de la CPU, la memoria utilizada, el tráfico de red, etc.) y otros indicadores relevantes del rendimiento del programa.
 
 Es importante tener en cuenta que el proceso de generación de un informe de tiempo y recursos consumidos por un programa puede variar dependiendo de las herramientas de las cuales se haga uso, el sistema operativo. Es esencial seguir las mejores prácticas y utilizar herramientas confiables y adecuadas para el análisis del rendimiento del sistema operacional.
@@ -39,61 +43,18 @@ Es importante tener en cuenta que el proceso de generación de un informe de tie
 ## 4. Enumere y describa cinco actividades de un OS enfocadas a la administración de archivos.
 
 *- Crear:*
-- a
+- El OS tiene la capacidad de crear nuevos archivos en el sistemas de archivos. Lo cual además tiene la capacidad de asignar espacio en disco para el nuevo archivo en una hubicacion del sistema y este le asigna un nombre y los permisos necesarios.
 
 *- Borrar:*
-- a
-
-*- Abrir:*
-- a
+- El OS debe permitir a los usuarios y a la aplicaciones de borrar archivos del sistema cuando se considere necesario borrarlo. Lo cual además implica librar el espacio en disco que estaba ocupado por el archivo y la eliminación de los registros y referencias al archivo en el sistema.
 
 *- Leer/Escribir/Reposicionar:*
-- a
+- El OS debe permitee a los usuarios y las aplicaciones leer y escribir datos en los archivos que existen en el el sistema. Archivos almacenados, así como la actualización de los datos en el archivos, lo cual implica que el OS debe hacer la busqueda en memoria del archivo y traerlo a disposición del usuario.
 
-*- Cerrar:*
-- a
-
-
+*- Renombrar/mover archivos:*
+- El OS debe permitir a los usuarios y las aplicaciones reb¿nombrar y mover archivos dentro del sistema de archivos, debe contener funciones como nombres y ubicaciones
 
 
-
-
-
-
-
-
-
-**◦ Diseño del sistema:**
-
-*- Multiprocesamiento simétrico (SMP):*
-- Todos los procesadores comparten los mismos recursos del sistema, también tienen la misma capacidad y función e incluso accede a los mismo recursos del sistema.
-
-*- Multiprocesamiento asimétrico (ASMP):*
-- Todos los procesadores de dividen en grupos y cada uno tiene una función y tarea específica, y cada uno tiene recursos del sistema.
-
-**◦ Escalabilidad:**
-
-*- Multiprocesamiento simétrico (SMP):*
-- Una de sus caracteristicas principales es qe tiene gran afinidad y escalabilidad, permitiendo agregar procesadores adicionales al sistema y además de aumentar la capacidad de procesamiento.
-
-*- Multiprocesamiento asimétrico (ASMP):*
-- Este no es tan fácilmente escalable ya que los procesadores son diseñados para cumplir funciones predeterminadas que incluso añadiendo nuevos procesadores no se verá afectado el rendimiento de la misma.
-
-**◦ Rendimiento:**
-
-*- Multiprocesamiento simétrico (SMP):*
-- Tienen mejor rendimiento en tareas que requieren una abundante cantidad de procesamiento paralelo ya que pues en conjunto cuando todos los procesadores trabajan en simultaneo se nota el aumento de rendimiento.
-
-*- Multiprocesamiento asimétrico (ASMP):*
-- Tiene un mejor rendimiento en tareas que se pueden dividir en tareas más pequeñas, ya que cada grupo de procesadores puede trabajar en diferentes tareas simultáneamente.
-
-**◦ Costo:**
-
-*- Multiprocesamiento simétrico (SMP):*
-- Suele ser más costoso debido a que los procesadores tienen las mismas capacidades y funciones por lo que en muchos casos se desperdician recuersos
-
-*- Multiprocesamiento asimétrico (ASMP):*
-- Debido a que los procesadores para este tipo de tecnología está focalizada para cumplir con los requeriemintos no se hace desperdicio de recursos.
 
 ## 5. Enumere los requerimientos para que dos maquinas se junten en un cluster y provean un servicio de alta disponibilidad (HA).
 
