@@ -11,16 +11,13 @@
 ## 3. Describa las acciones que toma el kernel para el cambio de contexto entre procesos.
 
 -  El cambio de contexto se refiere a la forma en que el sistema operativo pasa de ejecutar un proceso a otro. El kernel toma varias acciones para realizar esta tarea, como guardar el estado actual del proceso en ejecución, cargar el estado del siguiente proceso y actualizar las estructuras de datos relevantes. Todo esto se hace para asegurar que los procesos puedan ejecutarse de manera eficiente y segura en el sistema operativo.
-
 ***1. Guardado del contexto actual:*** El kernel guarda el estado actual del proceso que está siendo ejecutado. Esto incluye los valores de los registros de la CPU, el valor del puntero de pila y otros datos relevantes.
-
-***- Selección del siguiente proceso a ejecutar:*** el kernel selecciona el siguiente proceso a ejecutar. Esta selección puede ser aleatoria o estar basada en una prioridad asignada a cada proceso.
-
+***2. Selección del siguiente proceso a ejecutar:*** el kernel selecciona el siguiente proceso a ejecutar. Esta selección puede ser aleatoria o estar basada en una prioridad asignada a cada proceso.
 ***3. Carga del contexto del siguiente proceso:*** El kernel carga el contexto del siguiente proceso que se va a ejecutar. Esto incluye los valores de los registros de la CPU, el valor del puntero de pila y otros datos relevantes.
-
 ***4. Restauración del contexto:*** El kernel restaura el estado del nuevo proceso, de forma que la CPU continúa ejecutando el código del nuevo proceso a partir del punto donde fue interrumpido.
+***5. Ejecución del nuevo proceso:*** El kernel permite que el nuevo proceso se ejecute y se lleve a cabo su actividad normal
 
-***5. Ejecución del nuevo proceso:*** El kernel permite que el nuevo proceso se ejecute y se lleve a cabo su actividad normal.
+
 
 El cambio de contexto puede ser costoso en términos de tiempo de ejecución, ya que implica guardar y restaurar grandes cantidades de datos. Por esta razón, el kernel intenta minimizar el número de cambios de contexto que se producen en el sistema, para maximizar la eficiencia del mismo.
 
