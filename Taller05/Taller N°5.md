@@ -60,7 +60,7 @@ El cambio de contexto puede ser costoso en términos de tiempo de ejecución, ya
 
 ## 5. Defina las ventajas y desventajas desde el punto de vista del OS para envío por copia y envío por referencia.
 
-### **Envío por copia:
+- Envío por copia:
 
 - ***Ventajas:***
 
@@ -78,7 +78,7 @@ El cambio de contexto puede ser costoso en términos de tiempo de ejecución, ya
 
 -Duplicación: Al copiar los datos,  como se mencionaba anteriormente, se consumen más recursos ya que se crea una duplicación que puede ocupar espacio en disco.
 
-### **Envío por referencia:**
+- Envío por referencia:
 
 - ***Ventajas:***
 
