@@ -35,4 +35,6 @@
 3. Debido a las oocas limitaciones de tiempo que poseen, los participantes tienen más flexibilidad a la hora de responder, lo cual les permitirá dedicar tiempo a sus comentarios.
 
 - Desventajas
-1. 
+1. Debido a que hay tanta flexibilidad en los procesos y tomas de decisiones, es más complicado mantener el hilo de los procesos y y esto ouede generar errores en la comunicación.
+2. Es posible que slgunos procesos se ignoren o se retrasen, por ello sería en ocasiones más lento el proceso y se ralentiza todl el sistema de comunicación.
+3. Debido a que cada proceso de comunicación es separado se generan problemas grandes con la tima de decisiones y también se ve afectado con más problemas debido a su tardía resolución.
