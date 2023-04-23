@@ -11,11 +11,17 @@
 ## 3. Describa las acciones que toma el kernel para el cambio de contexto entre procesos.
 
 -  El cambio de contexto se refiere a la forma en que el sistema operativo pasa de ejecutar un proceso a otro. El kernel toma varias acciones para realizar esta tarea, como guardar el estado actual del proceso en ejecución, cargar el estado del siguiente proceso y actualizar las estructuras de datos relevantes. Todo esto se hace para asegurar que los procesos puedan ejecutarse de manera eficiente y segura en el sistema operativo.
+
 ***1. Guardado del contexto actual:*** El kernel guarda el estado actual del proceso que está siendo ejecutado. Esto incluye los valores de los registros de la CPU, el valor del puntero de pila y otros datos relevantes.
+
 ***2. Selección del siguiente proceso a ejecutar:*** el kernel selecciona el siguiente proceso a ejecutar. Esta selección puede ser aleatoria o estar basada en una prioridad asignada a cada proceso.
+
 ***3. Carga del contexto del siguiente proceso:*** El kernel carga el contexto del siguiente proceso que se va a ejecutar. Esto incluye los valores de los registros de la CPU, el valor del puntero de pila y otros datos relevantes.
+
 ***4. Restauración del contexto:*** El kernel restaura el estado del nuevo proceso, de forma que la CPU continúa ejecutando el código del nuevo proceso a partir del punto donde fue interrumpido.
+
 ***5. Ejecución del nuevo proceso:*** El kernel permite que el nuevo proceso se ejecute y se lleve a cabo su actividad normal
+
 
 
 
@@ -41,15 +47,16 @@ El cambio de contexto puede ser costoso en términos de tiempo de ejecución, ya
 
 - Ventajas
 1. La coordinación entre los usuarios es mucho mayor y no se hace necesario sincronizar horarios.
-2. La comunicación entre los participantes es mucho más libre, por lo cual pueden interactuar entre sí, sin limitaciones de tiempo o lugar.
-3. Debido a las oocas limitaciones de tiempo que poseen, los participantes tienen más flexibilidad a la hora de responder, lo cual les permitirá dedicar tiempo a sus comentarios.
+
+3. La comunicación entre los participantes es mucho más libre, por lo cual pueden interactuar entre sí, sin limitaciones de tiempo o lugar.
+4. Debido a las oocas limitaciones de tiempo que poseen, los participantes tienen más flexibilidad a la hora de responder, lo cual les permitirá dedicar tiempo a sus comentarios.
 
 - Desventajas
 1. Debido a que hay tanta flexibilidad en los procesos y tomas de decisiones, es más complicado mantener el hilo de los procesos y y esto ouede generar errores en la comunicación.
 2. Es posible que slgunos procesos se ignoren o se retrasen, por ello sería en ocasiones más lento el proceso y se ralentiza todl el sistema de comunicación.
 3. Debido a que cada proceso de comunicación es separado se generan problemas grandes con la tima de decisiones y también se ve afectado con más problemas debido a su tardía resolución.
 
-# **Solución Investigación 03**
+
 
 ## 5. Defina las ventajas y desventajas desde el punto de vista del OS para envío por copia y envío por referencia.
 
@@ -63,7 +70,7 @@ El cambio de contexto puede ser costoso en términos de tiempo de ejecución, ya
 
 -Privacidad: Si los datos son confidenciales, copiarlos puede ser una forma de protegerlos ya que así el original no será modificado.
 
-- ***Desventajas:***
+***- Desventajas:***
 
 -Uso de recursos: Copiar datos consume recursos del sistema, especialmente en el caso de grandes conjuntos de datos.
 
