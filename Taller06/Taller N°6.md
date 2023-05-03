@@ -26,14 +26,14 @@ Si, Los cúmulos de memoria (como el heap y el stack) tienden a compartirse entr
 
 # 5. Las variables globales se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
 
-Sí, las variables globales, como su nombre lo indica, son globales, lo que les permite ser accesibles y modificables por cualquier hilo en el proceso.
-Esto se debe a que todos los hilos de un proceso comparten el mismo espacio en memoria, y pues por lo tanto tienen acceso a los mismos datos y pues cualquier cambio realizado en una variable global por un hilo será visiable para todos los otros hilos del mismo proceso.
-Es importante tener en cuenta que si varios hilos acceden y modifican la variable global simultaneamente, puede haber problemas y obtener resultados inesperados. Para esto se deben tener precauciones, utilizando mecanismos de sincronización y así garantizar que solo un hilo a la vez tiene acceso a la variable.
+Sí, las variables son globales, por lo que serán accesibles y modificables por cualquier hilo en el proceso.
+Todos los hilos de un proceso comparten un mismo espacio en memoria global, por lo tanto tienen acceso a los mismos datos y pueden efectuar cualquier cambio que se quiera realizar en la variable global, toda esta información será visible para todos los otros hilos que estén ejecutando el mismo proceso.
+Se deben tener procesos planeados para los hilos que evitarán que varios acceden y modifiquen la variable global simultaneamente al mismo tiempo, de modo que se evitarán problemas por daños en la informacionó.
 
 # 6. La memoria de pila se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
 
-No, cada hilo tiene su propia pila, que se utiliza para almacenar las variables locales, los argumentos de función y la información de retorno. Esto es porque
-cada hilo necesita su propia pila para que las llamadas a funciones y las variables locales se puedan administrar correctamente sin interferencia entré sí.
+No, cada hilo tiene su propia pila. 
+Como se dijo anteirormente cada hilo en un proceso multihilo tiene su propia memoria de pila, lo que significa que la memoria de pila no se compartirá entre los hilos. Cada hilo necesita su propia pila para almacenar las variables locales, los argumentos de función y la información de retorno específica del hilo que es la que retornará para que los hilos puedan interactuar entre ellos. La memoria de pila se utiliza para la gestión de la pila de llamadas y la administración de variables locales, por lo que compartir la memoria de pila podría dar lugar a interferencias y errores. Por lo tanto, cada hilo tiene su propia memoria de pila para garantizar la correcta gestión de las llamadas a funciones y las variables locales de cada hilo.
 
 # 7.  En que ocasiones una solución multihilo que usa múltiples hilos del kernel proporciona mejor rendimiento que un solo hilo sobre un sistema monoprocesador.
 
@@ -51,13 +51,10 @@ Esto puede reducir el tiempo de espera y acelerar la tarea.
 
 # 8. Puede una solución multihilo que utiliza múltiples hilos de usuario conseguir mejor rendimiento en un sistema multiprocesador que en un sistema de un solo procesador?
 
-Sí, una solución multihilo que utiliza múltiples hilos de usuario puede lograr un mejor rendimiento en un sistema multiprocesador que en un sistema de un solo procesador debido a la distribución de hilos entre diferentes núcleos de procesador y la capacidad de cada núcleo de tener su propia caché.
-
-Recordemos que en el sistema multiprocesador los los hilos se pueden distribuir entre los diferentes procesadores, lo que permite que múltiples hilos trabajen simultáneamente en diferentes núcleos de procesador. Lo que permite acelerar el proceso y reducir el tiempo total de ejecución de la tarea. Y cada procesador tiene su propia caché, lo que mejora el rendimiento general del sistema.
-En cambio, en el sistema monoprocesador  los hilos tienen que compartir el tiempo de procesamiento en un solo núcleo, lo que puede provocar cuellos de botella y retrasos. Y los hilos comparten la misma caché lo que puede provocar congestión.
+En un sistema multiprocesador, una solución multihilo que utiliza varios hilos de usuario llega a alcanzar un mejor rendimiento si se compara con un sistema de un solo procesador. Esto es así porque los hilos se pueden distribuir entre los diferentes núcleos de procesador, permitiendo la simultáneidad en diferentes núcleos por lo cual se pueden reducir los tiempos de ejecución total de la tarea. Además, como cada  procesador tiene su propia caché permite que el rendimiento general del sistema sea superior. Por otro lado, en un sistema monoprocesador, los hilos deben compartir el tiempo de procesamiento en un solo núcleo, lo que puede generar cuellos de botella y retrasos. Asimismo, los hilos comparten la misma caché, lo que puede causar congestión y reducir el rendimiento del sistema.
 
 # 9. Suponga que el numero de hilos del usuario es mayor que el numero de procesadores del sistema. Explique el impacto sobre el rendimiento cuando el numero de hilos del kernel asignados al programa es menor que el numero de procesadores
 
-Lo que sucede en este caso, es que los hilos de usuario tendrán que competir por el tiempo de procesamiento de los pocos hilos del kernel disponibles. Y esto puede provocar mayor latencia en la ejecución de los hilos de usuario y un retraso en la finalización de la tarea en general.
+Los hilos de usuario deberán de competir por el tiempo de procesamiento de los pocos hilos del kernel disponibles. Y esto puede provocar mayor latencia cuando se estén ejecutando los hilos de usuario, este problema generará retraso en la finalización de la tarea en general debido a la poca disponibilidad de hilos en el kernel.
 
-Y si llegado el caso donde algunos hilos de usuario estén bloqueados esperando la finalización de una tarea de E/S, los hilos del kernel disponibles pueden estar inactivos mientras esperan a que se complete la tarea del hilo de usuario bloqueado. Esto provocaría aún más bajo rendimiento del sistema y pues un uso ineficiente de los recursos.
+Y si llegado el caso donde algunos hilos de usuario estén bloqueados esperando la finalización de una tarea de E/S, los hilos del kernel disponibles podrán estar inactivos hasta que se complete la tarea del hilo de usuario bloqueado. Lo cual sería aún peor para el rendimiento del sistema y pues un uso ineficiente de los recursos.
