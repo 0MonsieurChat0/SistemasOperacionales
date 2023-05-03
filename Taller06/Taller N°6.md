@@ -37,17 +37,14 @@ Como se dijo anteirormente cada hilo en un proceso multihilo tiene su propia mem
 
 # 7.  En que ocasiones una solución multihilo que usa múltiples hilos del kernel proporciona mejor rendimiento que un solo hilo sobre un sistema monoprocesador.
 
-Puede proporcionar mejor rendimiento cuando se puede realizar procesamiento paralelo, mejorar la capacidad de respuesta y/o mejorar el rendimiento entrada/salida(E/S).
-Explicando más a detalle las ocaciones mencionadas anteriormente:
+Cuando se puede realizar procesamiento paralelo, mejorará la capacidad de respuesta, además de mejorar el rendimiento entrada/salida(E/S).
 
-***- Procesamiento paralelo:*** Si la tareaa realizar se puede dividir en varias sub-tareas independientes, entonces se puede asignar cada sub-tarea a un hilo diferente. Esto permite que múltiples hilos trabajen simultáneamente y aceleren el proceso, ya que pueden realizar diferentes partes de la tarea al mismo tiempo.
-Pero que un solo hilo tenga que realizar cada sub-tarea secuencialmente puede que tarde más tiempo.
+***- Procesamiento paralelo:*** Cuando la tarea se puede dividir en varias sub-tareas independientes, es aquí cuando se asignarán las sub-tareas a un hilo diferente. Lo cual permitirá que múltiples hilos trabajen simultáneamente y aceleren el proceso realizando la misma tarea simultaneamente.
 
-***- Mejora de la capacidad de respuesta:*** En sistemas interactivos, como aplicaciones de usuario, múltiples hilos pueden mejorar la capacidad de respuesta del sistema. 
-Por ejemplo, si un hilo está esperando una entrada del usuario, otro hilo puede continuar procesando datos en segundo plano sin bloquear el hilo de la interfaz de usuario.
+***- Mejora de la capacidad de respuesta:*** En sistemas interactivos, como aplicaciones de usuario, múltiples hilos pueden mejorar la capacidad de respuesta del sistema. Cuando un hilo está esperando una nueva entrada por parte del usuario, otro hilo estará ejecutando procesos en segundo plano sin interrumpir el hilo encargado a la interfaz de usuario.
 
-***- Mejora del rendimiento de entrada/salida(E/S):*** En aplicaciones que realizan operaciones de E/S intensivas, como transferencia de archivos o descarga de datos de la red, múltiples hilos pueden mejorar el rendimiento al permitir que un hilo espere en una operación de E/S mientras otro hilo realiza operaciones de procesamiento de datos.
-Esto puede reducir el tiempo de espera y acelerar la tarea.
+***- Mejora del rendimiento de entrada/salida(E/S):*** En aplicaciones que realizan operaciones de entrada y salida, como transferencia de archivos o descarga de datos de la red, usar múltiples hilos mejorará el rendimiento ya que permitirá que un hilo espere en una operación de entrada y salida mientras los demás hilos realizarán operaciones de procesamiento de datos, permitiendo que el profeso sea mucho más eficiente.
+
 
 # 8. Puede una solución multihilo que utiliza múltiples hilos de usuario conseguir mejor rendimiento en un sistema multiprocesador que en un sistema de un solo procesador?
 
