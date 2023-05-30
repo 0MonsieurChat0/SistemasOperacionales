@@ -34,6 +34,7 @@ Un planificador de entrada/salida puede optimizar el uso de los dispositivos y r
 
 # 5. Considere el siguiente conjunto de procesos, todos llegan al mismo tiempo en el orden del subíndice: Dibuje el diagrama de Gantt para FCFS, SJF, por prioridades (# de prioridad baja = a alta prioridad) y RR (cuanto = 1).
 
+![Sin título](https://github.com/0MonsieurChat0/SistemasOperacionales/assets/100472763/11a99916-5036-4324-8f21-2baf0264201d)
 
 
 # 6. ¿Cual es el tiempo de ejecución de cada proceso para cada algoritmo?
