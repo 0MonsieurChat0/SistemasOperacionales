@@ -32,34 +32,41 @@ Por otro lado, si la CPU está ocupada procesando otros procesos y no puede aten
 
 Un planificador de entrada/salida puede optimizar el uso de los dispositivos y reducir los tiempos de espera. Esto implica dar prioridad a los procesos que requieren acceso a los dispositivos de entrada/salida, de manera que la CPU esté disponible para atender sus solicitudes. De esta manera, se mejora la utilización de los recursos y se evita la ralentización del sistema debido a los conflictos entre la CPU y los dispositivos de entrada/salida.
 
-# 5. Las variables globales se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
-
-Sí, las variables son globales, por lo que serán accesibles y modificables por cualquier hilo en el proceso.
-Todos los hilos de un proceso comparten un mismo espacio en memoria global, por lo tanto tienen acceso a los mismos datos y pueden efectuar cualquier cambio que se quiera realizar en la variable global, toda esta información será visible para todos los otros hilos que estén ejecutando el mismo proceso.
-Se deben tener procesos planeados para los hilos que evitarán que varios acceden y modifiquen la variable global simultaneamente al mismo tiempo, de modo que se evitarán problemas por daños en la informacionó.
-
-# 6. La memoria de pila se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
-
-No, cada hilo tiene su propia pila. 
-Como se dijo anteirormente cada hilo en un proceso multihilo tiene su propia memoria de pila, lo que significa que la memoria de pila no se compartirá entre los hilos. Cada hilo necesita su propia pila para almacenar las variables locales, los argumentos de función y la información de retorno específica del hilo que es la que retornará para que los hilos puedan interactuar entre ellos. La memoria de pila se utiliza para la gestión de la pila de llamadas y la administración de variables locales, por lo que compartir la memoria de pila podría dar lugar a interferencias y errores. Por lo tanto, cada hilo tiene su propia memoria de pila para garantizar la correcta gestión de las llamadas a funciones y las variables locales de cada hilo.
-
-# 7.  En que ocasiones una solución multihilo que usa múltiples hilos del kernel proporciona mejor rendimiento que un solo hilo sobre un sistema monoprocesador.
-
-Cuando se puede realizar procesamiento paralelo, mejorará la capacidad de respuesta, además de mejorar el rendimiento entrada/salida(E/S).
-
-***- Procesamiento paralelo:*** Cuando la tarea se puede dividir en varias sub-tareas independientes, es aquí cuando se asignarán las sub-tareas a un hilo diferente. Lo cual permitirá que múltiples hilos trabajen simultáneamente y aceleren el proceso realizando la misma tarea simultaneamente.
-
-***- Mejora de la capacidad de respuesta:*** En sistemas interactivos, como aplicaciones de usuario, múltiples hilos pueden mejorar la capacidad de respuesta del sistema. Cuando un hilo está esperando una nueva entrada por parte del usuario, otro hilo estará ejecutando procesos en segundo plano sin interrumpir el hilo encargado a la interfaz de usuario.
-
-***- Mejora del rendimiento de entrada/salida(E/S):*** En aplicaciones que realizan operaciones de entrada y salida, como transferencia de archivos o descarga de datos de la red, usar múltiples hilos mejorará el rendimiento ya que permitirá que un hilo espere en una operación de entrada y salida mientras los demás hilos realizarán operaciones de procesamiento de datos, permitiendo que el profeso sea mucho más eficiente.
+# 5. Considere el siguiente conjunto de procesos, todos llegan al mismo tiempo en el orden del subíndice: Dibuje el diagrama de Gantt para FCFS, SJF, por prioridades (# de prioridad baja = a alta prioridad) y RR (cuanto = 1).
 
 
-# 8. Puede una solución multihilo que utiliza múltiples hilos de usuario conseguir mejor rendimiento en un sistema multiprocesador que en un sistema de un solo procesador?
 
-En un sistema multiprocesador, una solución multihilo que utiliza varios hilos de usuario llega a alcanzar un mejor rendimiento si se compara con un sistema de un solo procesador. Esto es así porque los hilos se pueden distribuir entre los diferentes núcleos de procesador, permitiendo la simultáneidad en diferentes núcleos por lo cual se pueden reducir los tiempos de ejecución total de la tarea. Además, como cada  procesador tiene su propia caché permite que el rendimiento general del sistema sea superior. Por otro lado, en un sistema monoprocesador, los hilos deben compartir el tiempo de procesamiento en un solo núcleo, lo que puede generar cuellos de botella y retrasos. Asimismo, los hilos comparten la misma caché, lo que puede causar congestión y reducir el rendimiento del sistema.
+# 6. ¿Cual es el tiempo de ejecución de cada proceso para cada algoritmo?
 
-# 9. Suponga que el numero de hilos del usuario es mayor que el numero de procesadores del sistema. Explique el impacto sobre el rendimiento cuando el numero de hilos del kernel asignados al programa es menor que el numero de procesadores
+El tiempo de ejecución de cada proceso se ve afectado por el algoritmo de planificación implementado y las características individuales del proceso y el sistema en cuestión.
 
-Los hilos de usuario deberán de competir por el tiempo de procesamiento de los pocos hilos del kernel disponibles. Y esto puede provocar mayor latencia cuando se estén ejecutando los hilos de usuario, este problema generará retraso en la finalización de la tarea en general debido a la poca disponibilidad de hilos en el kernel.
+- FCFS (Primero en llegar, primero en ser atendido): El tiempo de ejecución de cada proceso se determina por el momento en que llega al sistema y la cantidad de tiempo de CPU que requiere. Los procesos se ejecutan en el orden de llegada, lo que significa que los primeros en llegar son los primeros en ejecutarse. Los procesos con mayores necesidades de tiempo de CPU tendrán una duración de ejecución más larga, lo que potencialmente puede retrasar la finalización de otros procesos.
+- SJF (Primero el trabajo más corto): El tiempo de ejecución de cada proceso está determinado por los requerimientos de tiempo de CPU de cada uno. Los procesos se ejecutan en orden ascendente de duración, comenzando con el proceso que requiere menos tiempo de CPU. Al ejecutar los procesos más cortos primero, se puede reducir el tiempo de espera de los demás procesos.
+- Round Robin (RR): El tiempo de ejecución de los procesos está vinculado al tiempo de cuantum establecido para el planificador. Los procesos se ejecutan en intervalos de tiempo iguales y luego se intercambian por el siguiente proceso en la cola. Aquellos procesos que necesitan más tiempo de CPU pueden requerir varios ciclos de cuantum para finalizar, lo cual puede impactar el tiempo de respuesta de otros procesos.
 
-Y si llegado el caso donde algunos hilos de usuario estén bloqueados esperando la finalización de una tarea de E/S, los hilos del kernel disponibles podrán estar inactivos hasta que se complete la tarea del hilo de usuario bloqueado. Lo cual sería aún peor para el rendimiento del sistema y pues un uso ineficiente de los recursos.
+# 7. ¿Cual es el tiempo de espera de cada proceso para cada algoritmo?
+
+El algoritmo de planificación implementado y las características individuales del proceso y el sistema afectan el tiempo de espera de cada proceso.
+
+- En el caso del algoritmo FCFS (Primero en llegar, primero en ser atendido), el tiempo de espera de cada proceso se ve influenciado por el orden de llegada de los procesos anteriores. Si un proceso llega temprano y tiene una duración prolongada, los procesos posteriores deben esperar más tiempo antes de ser atendidos, lo que puede resultar en un aumento significativo del tiempo de espera.
+
+- En el algoritmo SJF (Primero el trabajo más corto), el tiempo de espera de cada proceso está determinado por la duración del tiempo de CPU que cada proceso requiere y el orden en que los procesos llegan. Al dar prioridad a los procesos más cortos, se puede reducir el tiempo de espera de otros procesos, ya que se les brinda la oportunidad de ser ejecutados más rápidamente.
+
+- En el algoritmo Round Robin (RR), el tiempo de espera de cada proceso depende del tiempo de cuantum establecido por el planificador y la cantidad de procesos en ejecución. Si el cuantum es demasiado pequeño, los procesos que requieren una gran cantidad de tiempo de CPU pueden demorar en finalizar, lo que resulta en un aumento del tiempo de espera para otros procesos en la cola de ejecución.
+
+# 8. ¿Que algoritmo puede dar lugar a bloqueos indefinidos?
+
+En la espera activa, un proceso que necesita acceder a un recurso compartido entra en un bucle continuo mientras espera a que el recurso se libere, verificando regularmente su disponibilidad. Sin embargo, existe el riesgo de que el proceso en espera pueda quedarse atrapado indefinidamente sin obtener el recurso si otros procesos lo adquieren y lo liberan constantemente. Este fenómeno se conoce como bloqueo por inanición.
+
+El bloqueo por inanición puede ser problemático en sistemas críticos o en tiempo real, donde se requiere una respuesta rápida y predecible. Si un proceso importante se ve afectado por el bloqueo por inanición, puede resultar en retrasos significativos y afectar el rendimiento general del sistema.
+
+Para evitar este problema, se pueden aplicar técnicas como el envejecimiento de procesos en espera. Esta técnica consiste en otorgar prioridad a los procesos que han estado esperando durante un período prolongado de tiempo. Después de cierto tiempo de espera, se les da prioridad para adquirir el recurso necesario, lo que garantiza que eventualmente puedan obtener acceso al recurso compartido y evitar el bloqueo por inanición. Esto ayuda a equilibrar la justicia en la asignación de recursos y evita que los procesos queden atrapados en una espera indefinida.
+
+
+# 9. Considere un sistema que implementa una planificación por colas multinivel. ¿Que estrategia puede utilizar una computadora para maximizar la cantidad de tiempo de CPU asignada al proceso del usuario?
+
+En un sistema con planificación por colas multinivel, se puede utilizar la estrategia de envejecimiento para aumentar la prioridad de los procesos que han estado esperando en una cola de baja prioridad durante un período prolongado. Esta estrategia asegura que estos procesos tengan la oportunidad de ejecutarse en algún momento, a pesar de estar en una cola de baja prioridad.
+
+El envejecimiento implica incrementar gradualmente la prioridad de los procesos que han estado esperando durante mucho tiempo en una cola de baja prioridad. Esto garantiza que reciban una asignación justa de tiempo de CPU, incluso si su prioridad original era baja. Al aumentar su prioridad a lo largo del tiempo, se evita que los procesos de alta prioridad consuman completamente la CPU, ya que los procesos envejecidos también tienen la posibilidad de ejecutarse.
+
+Es importante tener en cuenta que el envejecimiento no es la única estrategia utilizada en sistemas de planificación por colas multinivel. Otras técnicas, como la prioridad dinámica o el ajuste de los valores de cuantum para cada cola, también pueden ser efectivas en situaciones específicas. Cada técnica tiene sus propias ventajas y desventajas, y su elección dependerá de las características y requisitos del sistema en cuestión.
