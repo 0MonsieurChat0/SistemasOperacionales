@@ -106,8 +106,8 @@ Segmento  | Base  | Longitud  |
 4         |1952   | 96        |
 
 *¿Cuales son las direcciones físicas para las siguientes direcciones lógicas?*
-0. 430   = 649
-1 10    = 2310
-2. 500   = 590
-3. 400   = 1727
-4. 112   = 2064
+ - 0. 430   = 649
+ - 1 10    = 2310
+ - 2. 500   = 590
+ - 3. 400   = 1727
+ - 4. 112   = 2064
