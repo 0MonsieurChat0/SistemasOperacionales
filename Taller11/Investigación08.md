@@ -94,15 +94,20 @@ En el caso de la segmentación, se requiere una tabla de segmentos que mapee los
 
 ## 9. Considere la siguiente tabla de segmento:
 Segmento  | Base  | Longitud  | 
+
 0         |219    |600        |
+
 1         |2300   |14         |
+
 2         |90     |100        |
+
 3         |1327   |580        |
+
 4         |1952   | 96        |
 
 *¿Cuales son las direcciones físicas para las siguientes direcciones lógicas?*
-1. 0. 430   = 649
-2. 1. 10    = 2310
-3. 2. 500   = 590
-4. 3. 400   = 1727
-5. 4. 112   = 2064
+- 0. 430   = 649
+- 1. 10    = 2310
+- 2. 500   = 590
+- 3. 400   = 1727
+- 4. 112   = 2064
